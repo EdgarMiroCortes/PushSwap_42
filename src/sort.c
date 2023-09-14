@@ -6,7 +6,7 @@
 /*   By: emiro-co <emiro-co@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/30 12:10:43 by emiro-co          #+#    #+#             */
-/*   Updated: 2023/08/08 17:09:56 by emiro-co         ###   ########.fr       */
+/*   Updated: 2023/09/14 14:08:38 by emiro-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ void	order5(t_stack **a, t_stack **b)
 		else
 			ra(a, 1);
 	}
-	if ((*b)->num > (*b)->next->num)
-		sa(*a, 1);
 	ob2(*b);
 	order3(a);
 	pa(a, b);

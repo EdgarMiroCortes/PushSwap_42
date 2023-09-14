@@ -6,7 +6,7 @@
 /*   By: emiro-co <emiro-co@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/30 12:10:43 by emiro-co          #+#    #+#             */
-/*   Updated: 2023/08/03 11:48:43 by emiro-co         ###   ########.fr       */
+/*   Updated: 2023/09/14 14:19:14 by emiro-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,6 @@ void	ob2(t_stack *a)
 		sb(a, 1);
 }
 
-void	ob3(t_stack **a)
-{
-	if (((*a)->num > (*a)->next->num) && 
-		((*a)->next->num > (*a)->next->next->num))
-		return ;
-	while (((*a)->next->num < (*a)->next->next->num) || 
-		((*a)->num < (*a)->next->next->num))
-		ra(a, 1);
-	if ((*a)->num < (*a)->next->num)
-		sa(*a, 1);
-}
-
 void	order2(t_stack *a)
 {
 	if (a->num > a->next->num)
@@ -38,11 +26,11 @@ void	order2(t_stack *a)
 
 void	order3(t_stack **a)
 {
-	if (((*a)->num < (*a)->next->num) && ((*a)->next->num < 
-			(*a)->next->next->num))
+	if (((*a)->num < (*a)->next->num)
+		&& ((*a)->next->num < (*a)->next->next->num))
 		return ;
-	while (((*a)->next->num > (*a)->next->next->num) || 
-		((*a)->num > (*a)->next->next->num))
+	while (((*a)->next->num > (*a)->next->next->num)
+		|| ((*a)->num > (*a)->next->next->num))
 		ra(a, 1);
 	if ((*a)->num > (*a)->next->num)
 		sa(*a, 1);

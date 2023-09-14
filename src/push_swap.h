@@ -6,7 +6,7 @@
 /*   By: emiro-co <emiro-co@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 12:12:31 by emiro-co          #+#    #+#             */
-/*   Updated: 2023/09/04 12:08:23 by emiro-co         ###   ########.fr       */
+/*   Updated: 2023/09/14 13:45:38 by emiro-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
-# include "libft/libft.h"
+# include "../libft/libft.h"
 
 //   ~~~   LISTAS  ~~~   //
 typedef struct s_stack
@@ -37,37 +37,34 @@ typedef struct s_moves
 //   ~~~   PRINCIPAL   ~~~   //
 int		*first(int argc, char *argv[]);
 t_stack	*parse(t_stack *s, char *arg);
-t_stack	*parse1(char *arg);
 
 //   ~~~   ORDENAR   ~~~   //
 void	sort(t_stack **a, t_stack **b);
 void	order2(t_stack *a);
 void	ob2(t_stack *a);
 void	order3(t_stack **a);
-void	ob3(t_stack **a);
 void	order4(t_stack **a, t_stack**b);
 void	order5(t_stack **a, t_stack**b);
 void	order(t_stack **a, t_stack **b);
 void	search2aux1(t_moves bigger, t_stack **b, t_stack **a);
 void	search2aux2(t_moves big, t_stack **b, int *nums, int last);
 
+//   ~~~   CHECKING AND PARSING   ~~~   //
+int		checksort(t_stack *stack);
+int		check_rep(t_stack *stack);
+int		check(char *arg);
+
 //   ~~~   UTILS   ~~~   //
 int		slen(t_stack *stack);
 size_t	ft_strlen(const char *str);
 int		isnum(char *num);
 int		peq(t_stack **a);
-int		*min(t_stack **a, int x);
-int		**ft_set(t_stack **a, int sizea, int sizeb, int sizec);
 void	ft_sep(t_stack **a, t_stack **b);
 void	ft_sep2(t_stack **a, t_stack **b, int size, int *first);
-void	last10(t_stack **a, t_stack **b, int sizeb);
 void	search2big(t_stack **a, t_stack **b);
 t_moves	ft_locate(int num, t_stack *b, int len);
-int		checksort(t_stack *stack);
-int		checkrepeated(t_stack *stack);
+int		*min(t_stack **a, int x);
 int		*min2(int tamano, int *numeros);
-int		check(char *arg);
-char	**free_split(char **s, size_t j);
 
 //   ~~~   MOVIMENTS   ~~~   //
 void	sa(t_stack	*a, int i);

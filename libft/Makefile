@@ -6,7 +6,7 @@
 #    By: emiro-co <emiro-co@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/12 18:58:11 by emiro-co          #+#    #+#              #
-#    Updated: 2023/08/01 12:05:31 by emiro-co         ###   ########.fr        #
+#    Updated: 2023/09/14 12:32:54 by emiro-co         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,10 +80,10 @@ LIB_H			= libft.h
 all:			$(NAME)
 
 %.o:		 	%.c $(LIB_H)
-				$(CC) $(CFLAGS) -c -o $@ $<
+				@$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME):		$(OBJS) $(OBJSPRINTF)
-				ar rcs $(NAME) $(OBJS) $(OBJSPRINTF)
+				@ar rcs $(NAME) $(OBJS) $(OBJSPRINTF)
 
 clean:
 				$(RM) $(OBJS) $(OBJSPRINTF)

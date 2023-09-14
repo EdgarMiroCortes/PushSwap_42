@@ -6,7 +6,7 @@
 /*   By: emiro-co <emiro-co@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 12:10:57 by emiro-co          #+#    #+#             */
-/*   Updated: 2023/08/03 11:49:36 by emiro-co         ###   ########.fr       */
+/*   Updated: 2023/09/14 14:21:59 by emiro-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,38 +49,4 @@ int	slen(t_stack *stack)
 		i++;
 	}
 	return (i);
-}
-
-int	checksort(t_stack *stack)
-{
-	if (stack == NULL || stack->next == NULL)
-		return (1);
-	if (stack->num > stack->next->num)
-		return (0);
-	return (checksort(stack->next));
-}
-
-size_t	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-int	isnum(char *num)
-{
-	int	i;
-
-	i = 0;
-	while (num[i] != '\0')
-	{
-		if ((num[i] >= '\060' && num[i] <= '\071') || (num[i] == 45))
-			i++;
-		else
-			return (-1);
-	}
-	return (1);
 }

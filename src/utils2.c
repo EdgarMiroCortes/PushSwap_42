@@ -6,7 +6,7 @@
 /*   By: emiro-co <emiro-co@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 12:10:57 by emiro-co          #+#    #+#             */
-/*   Updated: 2023/08/08 16:53:38 by emiro-co         ###   ########.fr       */
+/*   Updated: 2023/09/14 13:39:14 by emiro-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,41 +76,4 @@ int	*min2(int tamano, int *numeros)
 		j++;
 	}
 	return (numeros);
-}
-
-int	checkrepeated(t_stack *stack)
-{
-	t_stack	*current;
-	t_stack	*runner;
-
-	if (stack == NULL || stack->next == NULL)
-	{
-		return (0);
-	}
-	current = stack;
-	while (current != NULL)
-	{
-		runner = current->next;
-		while (runner != NULL)
-		{
-			if (current->num == runner->num)
-			{
-				return (1);
-			}
-			runner = runner->next;
-		}
-		current = current->next;
-	}
-	return (0);
-}
-
-char	**free_split(char **s, size_t j)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < j)
-		free(s[i++]);
-	free(s);
-	return (0);
 }
