@@ -28,9 +28,9 @@ SRC        	=   src/moves.c \
             	src/utils2.c \
             	src/sort.c \
             	src/sort2.c \
-            	src/sort3.c \
             	src/push_swap.c\
-				src/parsing.c          
+				src/parsing.c\
+				src/magic.c     
              
 all:		make_lib $(NAME)
 
